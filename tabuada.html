@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num1 = 1
+        let num2 = 0
+
+        for(num1; num2<=10; num2++){
+            //template String, este recurso do JS permite adicionar códigos JS dentro de uma String (Só funciona com CRASE, a cada $ abrimos chaves e colocamos o código)
+            console.log(`${num1} X ${num2} = ${num1*num2}`)
+            //console.log(num1 +"X"+ num2 +"="+ (num1*num2))
+        }
+
+
+       function calcular(num1, num2, operador){
+
+        // return eval((`${num1} ${operador} ${num2}`))
+       // return eval((num1 + operador + num2))
+
+       }
+
+       //Mesmo código escrito em ARROW FUNCTION
+
+       let calc = (num1, num2, operador) =>{
+         return eval((`${num1} ${operador} ${num2}`))
+       }
+
+        let resultado = (calc(10,2,"*"))
+
+        console.log(resultado)
+
+
+        window.addEventListener("focus", event =>{
+            //console.log("foco")
+        })
+
+         let eventoTeclado = window.addEventListener("keypress", event =>{
+           
+            console.log("Teclado!")
+            
+        })
+
+       let dataAtual = new Date
+       console.log(dataAtual.toLocaleDateString("pt-br"))
+
+       //ARRAY
+       let times = ["Santos", "Palmeiras", 10, dataAtual]
+
+       
+       
+       times.forEach(function(value, index){
+            console.log(index, value)
+        })
+
+    </script>
+</body>
+</html>
